@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hwchase17/langchainjs.git"
+    "url": "https://github.com/lemonade-hq/langchainjs.git"
   },
   "packageManager": "yarn@3.4.1",
   "scripts": {
@@ -27,7 +27,7 @@
     "test": "yarn run test:unit && yarn run test:int",
     "test:unit": "turbo run test",
     "test:int": "yarn workspace langchain run test:integration",
-    "publish": "bash scripts/release-branch.sh && turbo run build lint test && yarn run test:int && yarn workspace langchain run release",
+    "publish": "yarn workspace langchain run release",
     "example": "turbo run start --filter langchain-examples --",
     "prepare": "husky install",
     "precommit": "turbo run precommit",
